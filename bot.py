@@ -3,7 +3,9 @@ from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import ApplicationBuilder, CommandHandler, CallbackQueryHandler, ContextTypes
 
 # Token aur Data
-TOKEN = "8974809627:AAHyW5oMd7F-XCGlLFirJNwF_Udt-iTLKLU" # Apna token yahan update kar lena agar change kiya ho
+import os
+TOKEN = os.environ.get("TOKEN")
+ # Apna token yahan update kar lena agar change kiya ho
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     keyboard = [
